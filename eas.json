@@ -8,6 +8,9 @@
       "distribution": "internal",
       "android": {
         "buildType": "apk"
+      },
+      "npm": {
+        "install": "npm install --legacy-peer-deps"
       }
     },
     "production": {
