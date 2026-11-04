@@ -8,8 +8,7 @@
       "distribution": "internal",
       "android": {
         "buildType": "apk"
-      },
-      "nodeVersion": "20.0.0"
+      }
     },
     "production": {
       "autoIncrement": true
