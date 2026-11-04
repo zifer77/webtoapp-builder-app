@@ -1,26 +1,27 @@
 {
   "expo": {
-    "name": "a",
-    "slug": "a",
+    "name": "WebToApp",
+    "slug": "webtoapp-builder",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "a",
-    "userInterfaceStyle": "automatic",
-    "ios": {
-      "icon": "./assets/expo.icon"
-    },
+    "scheme": "webtoapp",
+    "userInterfaceStyle": "light",
     "android": {
+      "package": "com.webtoapp.builder",
+      "permissions": [
+        "android.permission.REQUEST_INSTALL_PACKAGES",
+        "android.permission.RECORD_AUDIO"
+      ],
       "adaptiveIcon": {
-        "backgroundColor": "#E6F4FE",
-        "foregroundImage": "./assets/images/android-icon-foreground.png",
-        "backgroundImage": "./assets/images/android-icon-background.png",
-        "monochromeImage": "./assets/images/android-icon-monochrome.png"
+        "backgroundColor": "#2563EB",
+        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "monochromeImage": "./assets/images/monochrome-icon.png"
       },
       "predictiveBackGestureEnabled": false
     },
     "web": {
-      "output": "server",
+      "output": "static",
       "favicon": "./assets/images/favicon.png"
     },
     "plugins": [
@@ -28,12 +29,31 @@
       [
         "expo-splash-screen",
         {
-          "backgroundColor": "#208AEF",
+          "backgroundColor": "#2563EB",
           "image": "./assets/images/splash-icon.png",
-          "imageWidth": 76
+          "imageWidth": 112
         }
-      ]
+      ],
+      "expo-secure-store",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Izinkan WebToApp memilih logo aplikasi dari galeri."
+        }
+      ],
+      "expo-web-browser"
     ],
+    "extra": {
+      "templateRepo": "zifer77/web2app",
+      "router": {
+        "asyncRoutes": {
+          "web": true
+        }
+      },
+      "eas": {
+        "projectId": "17f397cb-092c-4ab2-9bed-34ec2299fdf2"
+      }
+    },
     "experiments": {
       "typedRoutes": true,
       "reactCompiler": true
