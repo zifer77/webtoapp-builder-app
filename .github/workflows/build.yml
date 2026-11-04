@@ -17,6 +17,10 @@ jobs:
         with:
           node-version: '20'
 
+      # KITA INSTALL DI SINI BIAR DAPET LOCK FILE ASLI
+      - name: Install dependencies
+        run: npm install --legacy-peer-deps
+
       - name: Install EAS CLI
         run: npm install -g eas-cli
 
