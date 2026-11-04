@@ -17,12 +17,6 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Install dependencies
-        run: npm install --legacy-peer-deps
-
-      - name: Create fake lock file
-        run: echo "{}" > package-lock.json
-
       - name: Install EAS CLI
         run: npm install -g eas-cli
 
